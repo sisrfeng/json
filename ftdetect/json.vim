@@ -1,3 +1,3 @@
-autocmd BufNewFile,BufRead *.json setfiletype json
-autocmd BufNewFile,BufRead *.jsonp setfiletype json
-autocmd BufNewFile,BufRead *.geojson setfiletype json
+autocmd BufNewFile,BufRead *.json setlocal filetype=json
+autocmd BufNewFile,BufRead *.jsonp setlocal filetype=json
+autocmd BufNewFile,BufRead *.geojson setlocal filetype=json
