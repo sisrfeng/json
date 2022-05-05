@@ -49,13 +49,39 @@ Common problems
 This is the expected behavior of the plugin:  
 ![showcase](http://i.imgur.com/cmL1GNc.gif)
 
-Most trouble, little as it is, has to do with Vim's newfangled concealing, which most people aren't yet familiar with, as it was introduced as recently as Vim 7.3+. If you just don't care for concealing you can easily disable it adding `let g:vim_json_syntax_conceal = 0` to your `.vimrc`.
+Most trouble,
+little as it is,
+has to do with Vim's newfangled concealing,
+which most people aren't yet familiar with,
+as it was introduced as recently as Vim 7.3+.
+If you just don't care for concealing you can easily disable it adding `let g:vim_json_syntax_conceal = 0` to your `.vimrc`.
 
-Concealing is nice for viewing but when you want to edit it should get out of your way seamlessly so you can see the actual code. Thus the **default behavior** *should* be text shown normally on the line your cursor is at, on all modes (normal, visual, insert). If this isn't the case and the concealing doesn't go away (not even in insert mode), you most likely have **an interfering plugin**. You need to look at your `concealcursor` setting (which can be set through this plugin with `g:vim_json_syntax_concealcursor`). The specially overeager [**indentLine**](https://github.com/Yggdroot/indentLine), plugin would require _yet_ an additional `let g:indentLine_concealcursor=""` in your `.vimrc` as detailed [here](https://github.com/elzr/vim-json/issues/23#issuecomment-40293049).
+Concealing is nice for viewing
+but when you want to edit it should get out of your way seamlessly so you can see the actual code.
+Thus the **default behavior** *should* be text shown normally on the line your cursor is at,
+on all modes (normal,
+visual,
+insert).
 
+If this isn't the case and the concealing doesn't go away (not even in insert mode),
+you most likely have **an interfering plugin**.
+You need to look at your `concealcursor` setting (which can be set through this plugin with `g:vim_json_syntax_concealcursor`).
+The specially overeager [**indentLine**](https://github.com/Yggdroot/indentLine),
+plugin would require _yet_ an additional `let g:indentLine_concealcursor=""` in your `.vimrc` as detailed [here](https://github.com/elzr/vim-json/issues/23#issuecomment-40293049).
 It's a good idea to test drive with the files `json-test.json` and `jsonp-test.jsonp` first thing.
 
 Other recommended software
 --------------------------
 * [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa): Chrome extension for printing JSON and JSONP nicely when you visit it 'directly' in a browser tab.
 * [Convert JSON to YAML](http://www.json2yaml.com/): side by side, real-time conversion of the "fat and rigid" JSON to the "skinny and flexible" YAML.
+
+
+
+
+" MIT License
+" Copyright (c) 2013, Jeroen Ruigrok van der Werven, Eli Parra
+"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+"The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+"the software is provided as is, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+"See https://twitter.com/elzr/status/294964017926119424
+
